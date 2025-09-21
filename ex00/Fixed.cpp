@@ -10,3 +10,40 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Fixed.hpp"
+
+// ! Definitions of Constructor, Destructor, Member functions, and Setters, Getters
+
+// * Default constructor
+Fixed::Fixed() : fixedPointNumber(0){
+    std::cout << "Default constructor called" << std::endl;
+}
+
+// * Copy constructor
+Fixed::Fixed(const Fixed &other) : fixedPointNumber(other.fixedPointNumber){
+    std::cout << "Copy constructor called" << std::endl;
+}
+
+// * Copy assignment operator
+Fixed &Fixed::operator=(const Fixed &other){
+    std::cout << "Copy assignment operator called" << std::endl;
+    if (this != &other){
+        this->fixedPointNumber = other.fixedPointNumber;
+    }
+    return *this;
+}
+
+// * Destructor
+Fixed::~Fixed(){
+    std::cout << "Destructor called" << std::endl;
+}
+
+// * Setters & Getters
+void Fixed::setRawBits(const int value){
+    this->fixedPointNumber = value;
+}
+
+int Fixed::getRawBits() const {
+    std::cout << "getRawBits member function called" << std::endl;
+    return this->fixedPointNumber;
+}
