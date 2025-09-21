@@ -32,14 +32,14 @@ class Fixed{
         Fixed(const Fixed &other);
 
         // * Copy assignment operator
-        Fixed &operator = (const Fixed &other); 
+        Fixed &operator=(const Fixed &other); 
 
         // * Destructor
         ~Fixed();
 
         // * Setters & Getters
-        void setRawBits(int value);
-        int getRawBits();
+        void setRawBits(const int value);
+        int getRawBits() const;
 };
 
 #endif
