@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 17:27:41 by mdahani           #+#    #+#             */
-/*   Updated: 2025/09/28 12:57:53 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/09/28 14:23:55 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ float Fixed::toFloat() const {
 }
 
 // * Operator <<
+// ! Overload = defining a function or an operator with the same name but with different parameters.
+// ! The compiler automatically chooses the appropriate definition based on the type of the data.
 std::ostream &operator<<(std::ostream &output, const Fixed &other){
     return output << other.toFloat();
 }
