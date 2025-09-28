@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/21 12:54:19 by mdahani           #+#    #+#             */
-/*   Updated: 2025/09/21 12:54:19 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/09/28 10:31:35 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Person{
         void setName(const std::string &value);
         std::string getName() const;
 
-        // * Metod
+        // * Method
         void sayHello() const;
 };
 

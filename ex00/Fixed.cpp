@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 17:27:41 by mdahani           #+#    #+#             */
-/*   Updated: 2025/09/20 17:27:41 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/09/28 11:32:56 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 // ! Definitions of Constructor, Destructor, Member functions, and Setters, Getters
 
-// * Default constructor
+// * Default constructor with initializer list
 Fixed::Fixed() : fixedPointNumber(0){
     std::cout << "Default constructor called" << std::endl;
 }
 
-// * Copy constructor
+// * Copy constructor with initializer list
 Fixed::Fixed(const Fixed &other) : fixedPointNumber(other.fixedPointNumber){
     std::cout << "Copy constructor called" << std::endl;
 }
