@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 17:27:41 by mdahani           #+#    #+#             */
-/*   Updated: 2025/09/28 14:23:55 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/07 11:17:35 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,16 @@ float Fixed::toFloat() const {
     return (float)this->fixedPointNumber / (1 << this->fractionalBits);
 }
 
-// * Operator <<
-// ! Overload = defining a function or an operator with the same name but with different parameters.
+// ? Operator insertion <<
+// ! Overload: defining a function or an operator with the same name but with different parameters.
 // ! The compiler automatically chooses the appropriate definition based on the type of the data.
+// * We retrun reference of ostream type beacuse ostream non-copyable & The reference allows us to chaining: std::cout << a << b << c;
+// ? std::ostream &output: id reference to the stream we are writing in & Non-const because we change the state of the stream when writing
+// * (like buffer pointer, or state flags).
+// ? std::ostream &output: reference to the stream we are writing in. Non-const because we change the state of the stream when writing
+// * (like buffer pointer, or state flags). Re-references are important for chaining.
+// ? const Fixed &other: a constant reference to the object we want to print.
+
 std::ostream &operator<<(std::ostream &output, const Fixed &other){
     return output << other.toFloat();
 }
