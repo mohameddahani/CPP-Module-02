@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 17:27:43 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/06 17:44:47 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/07 18:49:36 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ class Fixed{
         int toInt() const;
 };
 
-// std::ostream &operator<<(std::ostream &output, const Fixed &other);
+// * std::ostream &operator<<(std::ostream &output, const Fixed &other);
 std::ostream &operator<<(std::ostream &output, const Fixed &other);
 
 #endif

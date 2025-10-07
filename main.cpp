@@ -6,36 +6,38 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 10:00:28 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/07 10:11:16 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/07 18:44:03 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-class Student{
-    private:
-        int *age;
-    public:
-        Student(int age){
-            this->age = new int(age);
+class Test {
+    int *data;
+public:
+    Test() { data = new int(42); }
+    ~Test() { delete data; }
+
+    int getData(void){
+        return *data;
+    }
+
+    Test &operator=(Test &other) {
+        if (this != &other)
+        {
+            *this->data = *other.data;
         }
-        Student &operator=(const Student &other){
-            this->age = other.age;
-            return *this;
-        }
-        void getAge(){
-            std::cout << "age: " << *age << std::endl;
-        }
-        ~Student(){
-            std::cout << "rah mcha" << std::endl;
-            delete age;
-        };
+        
+        return *this;
+    }
 };
 
 
 int main(){
-    Student s1(20);
-    Student s2(10);
-    s2 = s1;
-    s2.getAge();
+    Test a;
+    Test b;
+    b = b;
+
+    
+    std::cout << b.getData() << std::endl;
 }

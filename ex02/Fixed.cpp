@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 17:27:41 by mdahani           #+#    #+#             */
-/*   Updated: 2025/09/28 15:36:53 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/07 18:51:04 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ Fixed::Fixed(const Fixed &other) : fixedPointNumber(other.fixedPointNumber){}
 
 // * Copy assignment operator
 Fixed &Fixed::operator=(const Fixed &other){
-    if (this != &other){
-        this->fixedPointNumber = other.fixedPointNumber;
-    }
+    this->fixedPointNumber = other.fixedPointNumber;
     return *this;
 }
 

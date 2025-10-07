@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 17:27:14 by mdahani           #+#    #+#             */
-/*   Updated: 2025/09/20 17:27:14 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/07 15:05:49 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 int main( void ) {
     Fixed a;
+    
+    a.setRawBits(10);
+
     Fixed b( a );
     Fixed c;
     c = b;
