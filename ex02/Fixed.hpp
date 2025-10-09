@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 17:27:43 by mdahani           #+#    #+#             */
-/*   Updated: 2025/09/28 15:37:00 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/09 14:49:45 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,16 @@ class Fixed{
 
         // * (pre ++ post ++ & pre -- post --) Operator
         Fixed &operator++();
-        Fixed &operator++(int);
         Fixed &operator--();
-        Fixed &operator--(int);
+        Fixed operator++(int);
+        Fixed operator--(int);
+
+        // * max and min
+        static Fixed &min(Fixed &obj1, Fixed &obj2);
+        static const Fixed &min(const Fixed &obj1, const Fixed &obj2);
+        
+        static Fixed &max(Fixed &obj1, Fixed &obj2);
+        static const Fixed &max(const Fixed &obj1, const Fixed &obj2);
 };
 
 std::ostream &operator<<(std::ostream &output, const Fixed &other);
