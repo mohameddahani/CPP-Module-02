@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 17:27:14 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/09 14:36:42 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/09 17:31:07 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ int main( void ) {
 
     std::cout << Fixed::max( a, b ) << std::endl;
 
-return 0;
+    return 0;
 }

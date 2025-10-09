@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 17:27:41 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/09 15:23:27 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/09 17:30:12 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,27 +99,27 @@ Fixed Fixed::operator--(int){
 }
 
 // * Comparison operators (> < >= <= == !=)
-bool Fixed::operator>(const Fixed &other){
+bool Fixed::operator>(const Fixed &other) const{
     return this->toFloat() > other.toFloat();
 }
 
-bool Fixed::operator<(const Fixed &other){
+bool Fixed::operator<(const Fixed &other)const{
     return this->toFloat() < other.toFloat();
 }
 
-bool Fixed::operator>=(const Fixed &other){
+bool Fixed::operator>=(const Fixed &other) const{
     return this->toFloat() >= other.toFloat();
 }
 
-bool Fixed::operator<=(const Fixed &other){
+bool Fixed::operator<=(const Fixed &other) const{
     return this->toFloat() <= other.toFloat();
 }
 
-bool Fixed::operator==(const Fixed &other){
+bool Fixed::operator==(const Fixed &other) const{
     return this->toFloat() == other.toFloat();
 }
 
-bool Fixed::operator!=(const Fixed &other){
+bool Fixed::operator!=(const Fixed &other) const{
     return this->toFloat() != other.toFloat();
 }
 

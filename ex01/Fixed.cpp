@@ -6,13 +6,13 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 17:27:41 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/08 18:34:45 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/09 17:39:09 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-// ! Definitions of Constructor, Destructor, Member functions, and Setters, Getters
+// ! Definitions of Orthodox Canonical Form, Member functions, and Setters, Getters
 
 // * Default constructor with initializer list
 Fixed::Fixed(){

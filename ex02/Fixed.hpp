@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 17:27:43 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/09 15:20:15 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/09 17:23:20 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,12 @@ class Fixed{
         Fixed operator--(int);
 
         // * Comparison operators (> < >= <= == !=)
-        bool operator>(const Fixed &other);
-        bool operator<(const Fixed &other);
-        bool operator>=(const Fixed &other);
-        bool operator<=(const Fixed &other);
-        bool operator==(const Fixed &other);
-        bool operator!=(const Fixed &other);
+        bool operator>(const Fixed &other) const;
+        bool operator<(const Fixed &other) const;
+        bool operator>=(const Fixed &other) const;
+        bool operator<=(const Fixed &other) const;
+        bool operator==(const Fixed &other) const;
+        bool operator!=(const Fixed &other) const;
         
 
         // * max and min
