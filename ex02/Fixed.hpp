@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 17:27:43 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/09 14:49:45 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/09 15:20:15 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ class Fixed{
         float toFloat() const;
         int toInt() const;
 
-        // * (+ - * /) Operator
+        // * (+ - * /) Operators
         Fixed operator+(const Fixed &other) const;
         Fixed operator-(const Fixed &other) const;
         Fixed operator*(const Fixed &other) const;
@@ -60,6 +60,15 @@ class Fixed{
         Fixed &operator--();
         Fixed operator++(int);
         Fixed operator--(int);
+
+        // * Comparison operators (> < >= <= == !=)
+        bool operator>(const Fixed &other);
+        bool operator<(const Fixed &other);
+        bool operator>=(const Fixed &other);
+        bool operator<=(const Fixed &other);
+        bool operator==(const Fixed &other);
+        bool operator!=(const Fixed &other);
+        
 
         // * max and min
         static Fixed &min(Fixed &obj1, Fixed &obj2);

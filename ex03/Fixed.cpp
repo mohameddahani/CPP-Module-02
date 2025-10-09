@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 17:27:41 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/09 14:53:45 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/09 15:23:27 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,15 +98,32 @@ Fixed Fixed::operator--(int){
     return old;
 }
 
-
-// * Operator << insertio
-// ! Overload = defining a function or an operator with the same name but with different parameters.
-// ! The compiler automatically chooses the appropriate definition based on the type of the data.
-std::ostream &operator<<(std::ostream &output, const Fixed &other){
-    return output << other.toFloat();
+// * Comparison operators (> < >= <= == !=)
+bool Fixed::operator>(const Fixed &other){
+    return this->toFloat() > other.toFloat();
 }
 
- // * max and min
+bool Fixed::operator<(const Fixed &other){
+    return this->toFloat() < other.toFloat();
+}
+
+bool Fixed::operator>=(const Fixed &other){
+    return this->toFloat() >= other.toFloat();
+}
+
+bool Fixed::operator<=(const Fixed &other){
+    return this->toFloat() <= other.toFloat();
+}
+
+bool Fixed::operator==(const Fixed &other){
+    return this->toFloat() == other.toFloat();
+}
+
+bool Fixed::operator!=(const Fixed &other){
+    return this->toFloat() != other.toFloat();
+}
+
+// * max and min
 Fixed &Fixed::min(Fixed &obj1, Fixed &obj2){
     if (obj1.toFloat() > obj2.toFloat()){
         return obj2;
@@ -137,4 +154,11 @@ const Fixed &Fixed::max(const Fixed &obj1, const Fixed &obj2){
     } else {
         return obj2;
     }
+}
+
+// * Operator << insertio
+// ! Overload = defining a function or an operator with the same name but with different parameters.
+// ! The compiler automatically chooses the appropriate definition based on the type of the data.
+std::ostream &operator<<(std::ostream &output, const Fixed &other){
+    return output << other.toFloat();
 }
