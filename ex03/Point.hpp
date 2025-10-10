@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 15:06:08 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/09 18:01:49 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/10 11:36:44 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,15 @@ class Point{
 
         // * Destructor
         ~Point();
+
+        // * Getters & Setters
+        Fixed getX() const;
+        Fixed getY() const;
+
+        // * Method
+        const Fixed calcAreaOfTriangle(Point const a, Point const b, Point const c) const;
 };
+
+bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif

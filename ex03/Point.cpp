@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 15:06:16 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/09 18:45:34 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/10 21:19:18 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,41 @@ Point &Point::operator=(const Point &other){
 // * Destructor
 Point::~Point(){}
 
+// * Getters & Setters
+Fixed Point::getX() const{
+    return this->x;
+}
+
+Fixed Point::getY() const{
+    return this->y;
+}
+
+ // * Method
+/*
+
+! Area Rule for Triangle (BSP Exercise)
+todo: Area = | Ax(By - Cy) + Bx(Cy - Ay) + Cx(Ay - By) | * 1/2 
+
+* Where:
+
+* Ax = X coordinate of point A
+* Ay = Y coordinate of point A
+* Bx = X coordinate of point B
+* By = Y coordinate of point B
+* Cx = X coordinate of point C
+* Cy = Y coordinate of point C
+* | ... | = Absolute value (to ensure area is positive)
+
+*/
+
+// * Calculating the area of ​​a triangle
+const Fixed Point::calcAreaOfTriangle(Point const a, Point const b, Point const c) const {
+    Fixed result = ((a.getX() * (b.getY() - c.getY())) +
+                    (b.getX() * (c.getY() - a.getY())) +
+                    (c.getX() * (a.getY() - b.getY()))) / Fixed(2);
+
+    if (result < 0)
+        result = result * Fixed(-1);
+
+    return result;
+}

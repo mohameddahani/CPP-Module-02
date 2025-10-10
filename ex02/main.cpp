@@ -6,14 +6,12 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 17:27:14 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/09 17:28:48 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/10 20:27:34 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Fixed.hpp"
-
-#include <stdio.h>
 
 int main( void ) {
     Fixed a;
