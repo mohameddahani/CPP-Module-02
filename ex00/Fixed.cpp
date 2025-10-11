@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 17:27:41 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/09 17:39:19 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/11 09:35:20 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ Fixed::~Fixed(){
 }
 
 // * Setters & Getters
-void Fixed::setRawBits(const int value){
-    this->fixedPointNumber = value;
+void Fixed::setRawBits(const int raw){
+    this->fixedPointNumber = raw;
 }
 
 int Fixed::getRawBits() const {

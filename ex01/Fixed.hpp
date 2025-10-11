@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 17:27:43 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/07 18:49:36 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/11 09:34:41 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ class Fixed{
         ~Fixed();
 
         // * Setters & Getters
-        void setRawBits(const int value);
+        void setRawBits(const int raw);
         int getRawBits() const;
 
         // * Methods
